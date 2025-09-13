@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Heart, Shield, Sparkles } from "lucide-react";
 import heroProduct from "@/assets/hero-product.jpg";
-
+import { Link } from "react-router-dom";
+import Love from './Love'
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-hero">
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 py-4 md:px-12">
-        <div className="text-2xl font-bold text-primary">✨ Bella</div>
+        <div className="text-2xl font-bold text-primary">✨ Mimi Shop</div>
         <div className="hidden md:flex space-x-8 text-foreground/80">
           <a href="#features" className="hover:text-primary transition-smooth">Features</a>
           <a href="#reviews" className="hover:text-primary transition-smooth">Reviews</a>
@@ -66,11 +67,14 @@ const Index = () => {
           
           <div className="relative animate-scale-in">
             <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-3xl animate-float"></div>
-            <img 
-              src={heroProduct} 
-              alt="Beautiful product showcase" 
-              className="relative z-10 w-full rounded-3xl shadow-medium hover-scale transition-smooth"
-            />
+              <Link to="/love">
+              <img
+                src={heroProduct}
+                alt="Beautiful product showcase"
+                className="relative z-10 w-full rounded-3xl shadow-medium hover-scale transition-smooth cursor-pointer"
+              />
+            </Link>
+         
           </div>
         </div>
       </section>
@@ -80,7 +84,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose <span className="text-primary">Bella</span>?
+              Why Choose <span className="text-primary">Mimi Shop</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Three powerful features that make our product stand out from the crowd
@@ -129,12 +133,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                name: "Sarah Johnson",
+                name: "Somchai Maimeesiw",
                 review: "This product completely transformed my skincare routine! I've never felt more confident.",
                 rating: 5
               },
               {
-                name: "Emma Davis",
+                name: "Thanakorn PakEsan",
                 review: "The results are incredible. My skin has never looked better. Highly recommend!",
                 rating: 5
               }
@@ -181,7 +185,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="px-6 py-12 md:px-12 bg-secondary/30">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="text-3xl font-bold text-primary mb-4">✨ Bella</div>
+          <div className="text-3xl font-bold text-primary mb-4">✨ Mimi Shop</div>
           <p className="text-muted-foreground mb-8">Your perfect beauty companion</p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-muted-foreground">
@@ -191,7 +195,7 @@ const Index = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-border text-sm text-muted-foreground">
-            © 2024 Bella. All rights reserved.
+            © 2024 Mimi Shop. All rights reserved.
           </div>
         </div>
       </footer>
